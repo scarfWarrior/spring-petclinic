@@ -1,3 +1,5 @@
+package org.springframework.samples.petclinic.petcare;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
