@@ -1,8 +1,8 @@
 package org.springframework.samples.petclinic.petcare;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class PetCareService {
@@ -23,4 +23,27 @@ public class PetCareService {
 	}
 
 	// Additional methods as needed
+	private final PetCareRepository petCareRepository;
+
+	@Autowired
+	public PetCareService(PetCareRepository petCareRepository) {
+		this.petCareRepository = petCareRepository;
+	}
+
+	public List<PetCare> findAll() {
+		return petCareRepository.findAll();
+	}
+
+	public Optional<PetCare> findById(Integer id) {
+		return petCareRepository.findById(id);
+	}
+
+	public PetCare save(PetCare petCare) {
+		return petCareRepository.save(petCare);
+	}
+
+	public void deleteById(Integer id) {
+		petCareRepository.deleteById(id);
+	}
+
 }
