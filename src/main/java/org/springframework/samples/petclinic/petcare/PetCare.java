@@ -55,5 +55,4 @@ public class PetCare {
 		this.date = date;
 	}
 
-
 }

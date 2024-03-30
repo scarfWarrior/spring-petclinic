@@ -52,4 +52,5 @@ public class PetCareController {
 	public void deletePetCareRecord(@PathVariable Integer id) {
 		petCareService.deleteById(id);
 	}
+
 }
