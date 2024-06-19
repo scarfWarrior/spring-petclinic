@@ -1,14 +1,12 @@
 package org.springframework.samples.petclinic.petcare;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+
 import java.util.Date;
 import org.springframework.samples.petclinic.owner.Pet;
 
 @Entity
+@Table(name = "pet_care")
 public class PetCare {
 
 	@Id
